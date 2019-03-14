@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='python-pip-package-starter-kit',
-    version='0.0.2',
+    version='0.0.1',
     description='Sample package from Schubert',
     long_description=readme,
     author='Raphael Schubert',
