@@ -12,6 +12,7 @@ setup(
     version='0.0.1',
     description='Print two files side-by-side (in columns)',
     long_description=readme,
+    long_description_content_type='text/markdown',
     author='Jack Morris',
     author_email='jxmorris12@gmail.com',
     url='https://github.com/jxmorris12/side-by-side',
