@@ -1,1 +1,0 @@
-from foo_bar import FooBar

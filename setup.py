@@ -8,13 +8,13 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='python-pip-package-starter-kit',
+    name='side-by-side',
     version='0.0.1',
-    description='Sample package from Schubert',
+    description='Print two files side-by-side (in columns)',
     long_description=readme,
-    author='Raphael Schubert',
-    author_email='rfswdp@gmail.com',
-    url='https://github.com/rfschubert/python-pip-package-starter-kit',
+    author='Jack Morris',
+    author_email='jxmorris12@gmail.com',
+    url='https://github.com/jxmorris12/side-by-side',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages()
 )
