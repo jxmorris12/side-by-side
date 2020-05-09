@@ -10,4 +10,6 @@ Duis sed sollicitudin ipsum. Praesent vel viverra odio, quis efficitur velit. Ma
 
 from side_by_side import print_side_by_side
 
-print_side_by_side(lorem_ipsum, lorem_ipsum, print_line_numbers=False)
+li2 = lorem_ipsum
+li2 = li2[:3] + '┌────────────────\n───────────────┬────────┐' + li2[3+len('┌───────────────────────────────┬────────┐'):]
+print_side_by_side(lorem_ipsum, li2, print_line_numbers=False)

@@ -5,3 +5,6 @@ dist/
 
 # pycache
 __pycache__/
+
+# for macs
+.DS_Store
