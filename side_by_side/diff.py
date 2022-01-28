@@ -1,3 +1,4 @@
+import platform
 import math
 import os
 
@@ -9,12 +10,19 @@ def make_substrings(s, L):
         pieces.append(s[i:i+L])
         i += L
     return pieces
-    
+
 def print_side_by_side(output1, output2, print_line_numbers=False, col_padding=2, delimiter=''):
     if len(delimiter) > col_padding:
         raise ValueError('Delimiter cannot be longer than padding')
-    # Get terminal size
-    rows, columns = map(int, os.popen('stty size', 'r').read().split())
+    # Determine OS name
+    if platform.system() == 'Windows':
+        # Get terminal size
+        terminal_dimensions = os.get_terminal_size()
+        rows, columns = terminal_dimensions.lines, terminal_dimensions.columns
+    # Linux or Mac
+    else:
+        # Get terminal size
+        rows, columns = map(int, os.popen('stty size', 'r').read().split())
     # Split files into lines
     lines1 = output1.split('\n')
     lines2 = output2.split('\n')
@@ -29,8 +37,8 @@ def print_side_by_side(output1, output2, print_line_numbers=False, col_padding=2
         max_num_digits_in_line_num = False
         line_fmt = ''
     # Print lines side by side
-    line_fmt += ('{:<' + str(col_width) + '}' 
-               + (' ' * math.floor((col_padding-len(delimiter))/2.)) 
+    line_fmt += ('{:<' + str(col_width) + '}'
+               + (' ' * math.floor((col_padding-len(delimiter))/2.))
                + delimiter
                + (' ' * math.ceil((col_padding-len(delimiter))/2.))
                + '{:<' + str(col_width) + '}')
