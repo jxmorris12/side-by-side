@@ -12,7 +12,7 @@ from side_by_side import print_side_by_side
 
 print_side_by_side(s1, s2)
 ```
-![lorem ipsum output with typical usage](https://raw.githubusercontent.com/jxmorris12/side-by-side/master/imgs/test.png)
+![lorem ipsum output with typical usage](imgs/test.png)
 
 ## Optional parameters
 
@@ -30,4 +30,9 @@ from side_by_side import print_side_by_side
 
 print_side_by_side(lorem_ipsum, lorem_ipsum, print_line_numbers=True, col_padding=24, delimiter='|++++|')
 ```
-![lorem ipsum output with typical usage](https://raw.githubusercontent.com/jxmorris12/side-by-side/master/imgs/test_fancy.png)
+![lorem ipsum output with typical usage](imgs/test_fancy.png)
+
+### Notebook
+
+![lorem ipsum output with typical usage](imgs/test_notebook.png)
+
